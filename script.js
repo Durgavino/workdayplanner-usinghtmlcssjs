@@ -1,7 +1,6 @@
 
 
 
-
 const d = new Date();
 //const time = d.getHours();
 
@@ -100,3 +99,30 @@ function get() {
 
 get();
 
+var sbtn1 = document.getElementById('sbtn1');
+
+sbtn1.addEventListener('click', save1);
+
+function save1() {
+
+  var storedvalue1 = localStorage.getItem('textarea10');
+  var textarea10 = document.getElementById('textarea10').value;
+
+  if (storedvalue1) {
+    storedvalue1.push(textarea10);
+  }
+  else {
+    storedvalue1 = [textarea10];
+  }
+  localStorage.setItem('text', JSON.stringify(storedvalue1));
+}
+
+function get1() {
+  var storedvalue1 = localStorage.getItem('text');
+  if (storedvalue1) {
+    document.getElementById('textarea10').value = storedvalue1;
+  }
+  localStorage.getItem('text', JSON.parse(storedvalue1));
+}
+
+get1();
