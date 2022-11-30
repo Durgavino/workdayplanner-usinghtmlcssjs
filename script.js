@@ -1,6 +1,6 @@
 
 
-
+<*--display the date --*>
 const d = new Date();
 //const time = d.getHours();
 
@@ -29,21 +29,18 @@ const months = monthNames[d.getMonth()];
 
 currentday.innerHTML = day + "," + months + " " + date;
 
+
+<*--adding color to the textarea*-->
+
 var rowlist = document.querySelectorAll(".row");
-
-
 var rowlistarr = Array.from(rowlist);
-
 var index = 0;
-
 
 function timeblock() {
 
   for (index = 0; index < rowlistarr.length; index++) {
     console.log("time", time);
     console.log(rowlistarr.length);
-
-
 
     if (time == rowlistarr.length) {
       //document.getElementById(`textarea${index + 9}`).style.backgroundColor = 'red';
@@ -60,7 +57,7 @@ function timeblock() {
     else (time > rowlistarr.length)
      {
       //document.getElementById(`textarea${index + 9}`).style.backgroundColor = 'gray';
-      document.getElementById(`${index + 9} `).style.backgroundColor = 'grey';
+      document.getElementById(`${index + 9}`).style.backgroundColor = 'grey';
     
     }
 
@@ -69,7 +66,7 @@ function timeblock() {
 timeblock();
 
 
-
+<*---Local storage--*>
 var sbtn0 = document.getElementById('sbtn0');
 
 
