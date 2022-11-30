@@ -1,6 +1,6 @@
 
 
-<*--display the date --*>
+//display the date 
 const d = new Date();
 //const time = d.getHours();
 
@@ -30,7 +30,7 @@ const months = monthNames[d.getMonth()];
 currentday.innerHTML = day + "," + months + " " + date;
 
 
-<*--adding color to the textarea*-->
+//adding color to the textarea*-->
 
 var rowlist = document.querySelectorAll(".row");
 var rowlistarr = Array.from(rowlist);
@@ -66,7 +66,7 @@ function timeblock() {
 timeblock();
 
 
-<*---Local storage--*>
+//Local storage--*>
 var sbtn0 = document.getElementById('sbtn0');
 
 
